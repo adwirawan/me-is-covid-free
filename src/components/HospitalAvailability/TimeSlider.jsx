@@ -1,18 +1,8 @@
 import React, { useState } from "react";
 import TimeRangeSlider from 'react-time-range-slider';
-import { makeStyles } from '@material-ui/core/styles';
 import FormLabel from "@material-ui/core/FormLabel";
 
-const useStyles = makeStyles({
-  root: {
-    width: 500,
-    margin: 30,
-  },
-});
-
 export default function TimeSlider() {
-  const classes = useStyles();
-
   // Time Range
   const [timeRange, setTimeRange] = useState({
     value: {
@@ -32,7 +22,7 @@ export default function TimeSlider() {
   }
 
   return (
-    <div className={classes.root}>
+    <div>
 
       <FormLabel style={{ paddingBottom: 12 }}>
         Selected Time: {timeRange.value.start} - {timeRange.value.end}

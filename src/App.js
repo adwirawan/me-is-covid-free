@@ -1,10 +1,10 @@
 import './App.css';
-import TimeSlider from './components/TimeSlider';
+import HospitalAvailability from './pages/HospitalAvailability';
 
 function App() {
   return (
     <div className="App">
-      <TimeSlider />
+      <HospitalAvailability />
     </div>
   );
 }
