@@ -14,16 +14,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TimeGrid() {
+export default function TimeGrid(props) {
   const classes = useStyles();
 
   return (
+
     <div className={classes.root}>
       
       <Grid container spacing={1} direction="row">
-  
-        {TimeSlot.map((item, index) => 
-          <div id={index}>  
+        {TimeSlot.map((item, index) => (item.start === props.startTime || item.end === props.endTime) ?
+          (<div key={index}>
+
             <Grid item xs={12}>
               <fieldset> 
                 <legend>
@@ -32,7 +33,7 @@ export default function TimeGrid() {
                 
                 <TextField
                   id="standard-number"
-                  label="Slot"
+                  label="Available Slot"
                   type="number"
                   // helperText="08.30-08.45"
                   defaultValue="0"
@@ -46,7 +47,33 @@ export default function TimeGrid() {
                 />               
               </fieldset>
             </Grid>                  
-          </div>
+          </div>) :
+          (<div key={index}>
+
+            <Grid item xs={12}>
+              <fieldset disabled> 
+                <legend>
+                  {item.label}
+                </legend>
+                
+                <TextField
+                  id="standard-number"
+                  label="Available Slot"
+                  type="number"
+                  // helperText="08.30-08.45"
+                  defaultValue="0"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                  inputProps={{ 
+                    min: 0 
+                  }}
+                  variant="filled"
+                  disabled
+                />               
+              </fieldset>
+            </Grid>                  
+          </div>)
         )}
       </Grid>
     </div>
