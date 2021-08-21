@@ -1,37 +1,37 @@
-export const TimeSlot = [
-  // 8
-  {
-    label: "08:00 - 08.15",
-    startHour: 8,
-    startMinute: 0,
-    endHour: 8,
-    endMinute: 15,
-    slot:0
-  },
-  {
-    label: "08:15 - 08.30",
-    startHour: 8,
-    startMinute: 15,
-    endHour: 8,
-    endMinute: 30,
-    slot:0
-  },
-  {
-    label: "08:30 - 08.45",
-    startHour: 8,
-    startMinute: 30,
-    endHour: 8,
-    endMinute: 45,
-    slot:0
-  },
-  {
-    label: "08:45 - 09.00",
-    startHour: 8,
-    startMinute: 45,
-    endHour: 9,
-    endMinute: 0,
-    slot:0
-  },
+export const TimeSlot2 = [
+  // // 8
+  // {
+  //   label: "08:00 - 08.15",
+  //   startHour: 8,
+  //   startMinute: 0,
+  //   endHour: 8,
+  //   endMinute: 15,
+  //   slot:5
+  // },
+  // {
+  //   label: "08:15 - 08.30",
+  //   startHour: 8,
+  //   startMinute: 15,
+  //   endHour: 8,
+  //   endMinute: 30,
+  //   slot:3
+  // },
+  // {
+  //   label: "08:30 - 08.45",
+  //   startHour: 8,
+  //   startMinute: 30,
+  //   endHour: 8,
+  //   endMinute: 45,
+  //   slot:4
+  // },
+  // {
+  //   label: "08:45 - 09.00",
+  //   startHour: 8,
+  //   startMinute: 45,
+  //   endHour: 9,
+  //   endMinute: 0,
+  //   slot:10
+  // },
 
   //9
   {
@@ -48,7 +48,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 9,
     endMinute: 30,
-    slot:1
+    slot:0
   },
   {
     label: "9:30 - 09.45",
@@ -56,7 +56,7 @@ export const TimeSlot = [
     startMinute: 30,
     endHour: 9,
     endMinute: 45,
-    slot:0
+    slot:6
   },
   {
     label: "9:45 - 10.00",
@@ -64,7 +64,7 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 10,
     endMinute: 0,
-    slot:2
+    slot:0
   },
 
   // 10
@@ -74,7 +74,7 @@ export const TimeSlot = [
     startMinute: 0,
     endHour: 10,
     endMinute: 15,
-    slot:0
+    slot:5
   },
   {
     label: "10:15 - 10.30",
@@ -82,7 +82,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 10,
     endMinute: 30,
-    slot:4
+    slot:0
   },
   {
     label: "10:30 - 10.45",
@@ -98,7 +98,7 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 11,
     endMinute: 0,
-    slot:3
+    slot:7
   },
   
   // 11
@@ -108,7 +108,7 @@ export const TimeSlot = [
     startMinute: 0,
     endHour: 11,
     endMinute: 15,
-    slot:2
+    slot:8
   },
   {
     label: "11:15 - 11.30",
@@ -116,7 +116,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 11,
     endMinute: 30,
-    slot:1
+    slot:9
   },
   {
     label: "11:30 - 11.45",
@@ -124,7 +124,7 @@ export const TimeSlot = [
     startMinute: 30,
     endHour: 11,
     endMinute: 45,
-    slot:1
+    slot:10
   },
   {
     label: "11:45 - 12.00",
@@ -142,7 +142,7 @@ export const TimeSlot = [
     startMinute: 0,
     endHour: 12,
     endMinute: 15,
-    slot:0
+    slot:2
   },
   {
     label: "12:15 - 12.30",
@@ -150,7 +150,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 12,
     endMinute: 30,
-    slot:0
+    slot:3
   },
   {
     label: "12:30 - 12.45",
@@ -158,7 +158,7 @@ export const TimeSlot = [
     startMinute: 30,
     endHour: 12,
     endMinute: 45,
-    slot:3
+    slot:0
   },
   {
     label: "12:45 - 13.00",
@@ -166,7 +166,7 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 13,
     endMinute: 0,
-    slot:4
+    slot:0
   },
 
   // 13
@@ -176,7 +176,7 @@ export const TimeSlot = [
     startMinute: 0,
     endHour: 13,
     endMinute: 15,
-    slot:2
+    slot:1
   },
   {
     label: "13:15 - 13.30",
@@ -184,7 +184,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 13,
     endMinute: 30,
-    slot:1
+    slot:0
   },
   {
     label: "13:30 - 13.45",
@@ -200,7 +200,7 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 14,
     endMinute: 0,
-    slot:8
+    slot:0
   },
 
   // 14
@@ -210,7 +210,7 @@ export const TimeSlot = [
     startMinute: 0,
     endHour: 14,
     endMinute: 15,
-    slot:0
+    slot:1
   },
   {
     label: "14:15 - 14.30",
@@ -226,7 +226,7 @@ export const TimeSlot = [
     startMinute: 30,
     endHour: 14,
     endMinute: 45,
-    slot:0
+    slot:5
   },
   {
     label: "14:45 - 15.00",
@@ -234,7 +234,7 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 15,
     endMinute: 0,
-    slot:3
+    slot:2
   },
   
   // 15
@@ -244,7 +244,7 @@ export const TimeSlot = [
     startMinute: 0,
     endHour: 15,
     endMinute: 15,
-    slot:4
+    slot:0
   },
   {
     label: "15:15 - 15.30",
@@ -252,7 +252,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 15,
     endMinute: 30,
-    slot:4
+    slot:3
   },
   {
     label: "15:30 - 15.45",
@@ -268,7 +268,7 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 16,
     endMinute: 0,
-    slot:1
+    slot:0
   },
 
   // 16
@@ -286,7 +286,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 16,
     endMinute: 30,
-    slot:0
+    slot:11
   },
   {
     label: "16:30 - 16.45",
@@ -294,7 +294,7 @@ export const TimeSlot = [
     startMinute: 30,
     endHour: 16,
     endMinute: 45,
-    slot:2
+    slot:3
   },
   {
     label: "16:45 - 17.00",
@@ -302,40 +302,40 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 17,
     endMinute: 0,
-    slot:4
+    slot:5
   },
 
   // 17
-  {
-    label: "17:00 - 17.15",
-    startHour: 17,
-    startMinute: 0,
-    endHour: 17,
-    endMinute: 15,
-    slot:0
-  },
-  {
-    label: "17:15 - 17.30",
-    startHour: 17,
-    startMinute: 15,
-    endHour: 17,
-    endMinute: 30,
-    slot:5
-  },
-  {
-    label: "17:30 - 17.45",
-    startHour: 17,
-    startMinute: 30,
-    endHour: 17,
-    endMinute: 45,
-    slot:3
-  },
-  {
-    label: "17:45 - 18.00",
-    startHour: 17,
-    startMinute: 45,
-    endHour: 18,
-    endMinute: 0,
-    slot:0
-  }
+  // {
+  //   label: "17:00 - 17.15",
+  //   startHour: 17,
+  //   startMinute: 0,
+  //   endHour: 17,
+  //   endMinute: 15,
+  //   slot:0
+  // },
+  // {
+  //   label: "17:15 - 17.30",
+  //   startHour: 17,
+  //   startMinute: 15,
+  //   endHour: 17,
+  //   endMinute: 30,
+  //   slot:0
+  // },
+  // {
+  //   label: "17:30 - 17.45",
+  //   startHour: 17,
+  //   startMinute: 30,
+  //   endHour: 17,
+  //   endMinute: 45,
+  //   slot:7
+  // },
+  // {
+  //   label: "17:45 - 18.00",
+  //   startHour: 17,
+  //   startMinute: 45,
+  //   endHour: 18,
+  //   endMinute: 0,
+  //   slot:10
+  // }
 ]

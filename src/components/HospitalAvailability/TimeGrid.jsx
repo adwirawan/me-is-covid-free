@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import { TimeSlot } from './TimeSlot';
 import NormalTextfield from "./NormalTextfield";
 import DisabledTextfield from "./DisabledTextfield";
+import ScrollableFeed from 'react-scrollable-feed';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,6 +13,14 @@ const useStyles = makeStyles((theme) => ({
   },
   table: {
     minWidth: 650,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    height: '400px',
+    width: '1000px',
+    margin: 'auto',
   },
 }));
 
@@ -43,44 +53,54 @@ export default function TimeGrid(props) {
     
   return (
 
-    <div className={classes.root}>
-      
-      <Grid container spacing={1} direction="row">
-        {availableTimeSlot.map((item, index) => (checkTime(startTime, endTime, item)) ?
-          (<div key={index}>
+    <div>
 
-            <Grid item xs={12}>
-              <fieldset> 
-                <legend>
-                  {item.label}
-                </legend>
-                
-                <NormalTextfield 
-                  identifier={item.label} 
-                  data={availableTimeSlot} 
-                  onChange={ new_data => setAvailableTimeSlot(new_data) }
-                  quotaParent = {props.quota}
-                />
+      <Paper className={classes.paper}>
+        <ScrollableFeed>
+          <Grid container container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+          >
+            {availableTimeSlot.map((item, index) => (checkTime(startTime, endTime, item)) ?
+              (<div key={index}>
 
-              </fieldset>
-            </Grid>                  
-          </div>) :
-          (<div key={index}>
+                <Grid item xs={11}>
+                  <fieldset> 
+                    <legend>
+                      {item.label}
+                    </legend>
+                    
+                    <NormalTextfield 
+                      identifier={item.label} 
+                      data={availableTimeSlot} 
+                      onChange={ new_data => setAvailableTimeSlot(new_data) }
+                      quotaParent = {props.quota}
+                    />
 
-            <Grid item xs={12}>
-              <fieldset disabled> 
-                <legend>
-                  {item.label}
-                </legend>
+                  </fieldset>
+                </Grid>                  
+              </div>) :
+              (<div key={index}>
 
-                <DisabledTextfield key={index} />
-                
-                       
-              </fieldset>
-            </Grid>                  
-          </div>)
-        )}
-      </Grid>
+                <Grid item xs={11}>
+                  <fieldset disabled> 
+                    <legend>
+                      {item.label}
+                    </legend>
+
+                    <DisabledTextfield key={index} />
+                    
+                          
+                  </fieldset>
+                </Grid>                  
+              </div>)
+            )}
+          </Grid>
+
+        </ScrollableFeed>
+      </Paper>
+
     </div>
   );
 }

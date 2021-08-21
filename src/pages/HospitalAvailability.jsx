@@ -4,17 +4,13 @@ import FormLabel from "@material-ui/core/FormLabel";
 import { makeStyles } from '@material-ui/core/styles';
 import TimeGrid from '../components/HospitalAvailability/TimeGrid';
 import TextField from '@material-ui/core/TextField';
-
-const useStyles = makeStyles({
-  root: {
-    width: 500,
-    margin: 30,
-  },
-});
+import Grid from '@material-ui/core/Grid';
+import "./HospitalAvailability.css";
+import bgHospital from '../assets/bg-pickTime.jpeg';
+import { Link } from "react-router-dom";
+import { Alert, AlertTitle } from '@material-ui/lab';
 
 export default function HospitalAvailability() {
-  const classes = useStyles();
-
   // Time Range
   const [timeRange, setTimeRange] = useState({
     value: {
@@ -44,59 +40,48 @@ export default function HospitalAvailability() {
   };
 
   return (
-    <div className={classes.root}>
+    <div>
 
-      <TextField
-        id="hospitalName"
-        label="Hospital Name"
-        value={hospitalName}
-        onChange={handleHospitalNameChange}
-        style={{ margin: 8 }}
-        placeholder="Enter Your Instituion Name"
-        fullWidth
-        margin="normal"
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
+      <img src={bgHospital} id="bg"/>
 
-      {/* <TextField
-        id="quota"
-        label="Quota/slot"
-        type="number"
-        style={{ margin: 8 }}
-        inputProps={{ min: 0 }}
-        value={quota}
-        onChange={handleQuotaChange}
-        fullWidth
-        margin="normal"
-        InputLabelProps={{
-          shrink: true,
-        }}
-      /> */}
+      <div className='hospitalName'>
 
-      <br/>
+        <h1>
+          Slide to select the available time range!
+        </h1>
 
-      <FormLabel style={{ paddingBottom: 12 }}>
-        Selected Time: {timeRange.value.start} - {timeRange.value.end}
-      </FormLabel>
+      </div>
+      <div className='hospitalSlideTime'>
 
-      <TimeRangeSlider
-        disabled={false}
-        draggableTrack={false}
-        format={24}
-        maxValue={"18:00"}
-        minValue={"08:00"}
-        name={"timeRange"}
-        onChange={onTimeRangeChange}
-        onChangeComplete={changeCompleteHandler}
-        step={15}
-        value={timeRange.value}
-      />
+        <TimeRangeSlider
+          disabled={false}
+          draggableTrack={false}
+          format={24}
+          maxValue={"18:00"}
+          minValue={"08:00"}
+          name={"timeRange"}
+          onChange={onTimeRangeChange}
+          onChangeComplete={changeCompleteHandler}
+          step={15}
+          value={timeRange.value}
+        />
+
+
+        <h3 className='hospitalAvailableTime'>
+          {timeRange.value.start} - {timeRange.value.end}
+        </h3>
+        
+      </div>
 
       <br/>
 
       <TimeGrid startTime={timeRange.value.start} endTime={timeRange.value.end} quota={quota} />
+
+      <Link to='/hospital/login'>
+        <button type='submit' className='btn-hospital-save' onClick={showAllert()}>
+          <h6 className='btn-hospital-save-text'>SAVE</h6>
+        </button>
+      </Link>
 
     </div>
   )

@@ -7,13 +7,17 @@ import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-
 import BookingConfirmation from './pages/BookingConfirmation';
 import ReCheckBooking from './pages/ReCheckBooking';
 import { TimeSlot } from './components/HospitalAvailability/TimeSlot.js';
+import { TimeSlot2 } from './components/HospitalAvailability/TimeSlot2.js';
 import PickTime from './pages/PickTime';
-import { useState } from 'react';
-import HospitalAvailability from './pages/HospitalAvailability'
+import HospitalAvailability from './pages/HospitalAvailability';
+import HospitalLogin from './pages/HospitalLogin';
+import About from './pages/About';
 
 function App() {
 
-  const [AvailableTimeSlot, setavailableTimeSlot] = useState(TimeSlot);
+  const AvailableTimeSlot1 = TimeSlot;
+
+  const AvailableTimeSlot2 = TimeSlot2;
 
   return (
     <Router>
@@ -38,12 +42,18 @@ function App() {
             <MapPage />
           </Route>
           <Route exact path='/booking/:siteName/selectTime'>
-            <PickTime data={AvailableTimeSlot} />
+            <PickTime data1={AvailableTimeSlot1} data2={AvailableTimeSlot2} />
           </Route>
 
-
+          <Route exact path='/hospital/login'>
+            <HospitalLogin />
+          </Route>
           <Route exact path='/hospital/availability'>
             <HospitalAvailability />
+          </Route>
+
+          <Route exact path="/about">
+            <About />
           </Route>
           
         </Switch>

@@ -13,8 +13,8 @@ class Navbar extends Component {
     return(
       <nav className="NavbarItems">
         
-        <div className='title'>
-          <h2>
+        <div>
+          <h2 className='me-is-covid-free'>
             #MeIsCovidFree
           </h2>
         </div>

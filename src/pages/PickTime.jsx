@@ -28,7 +28,9 @@ export default function PickTime(props) {
 
   const classes = useStyles();
 
-  const existing_data = props.data;
+  const existing_data1 = props.data1;
+
+  const existing_data2 = props.data2;
 
   function checkSlot(item) {
     if(item.slot > 0) {
@@ -66,7 +68,7 @@ export default function PickTime(props) {
               <Paper className={classes.paper}>
                 <ScrollableFeed>
                   <ul>
-                    {existing_data.map((item, index) => (checkSlot(item)) ? 
+                    {existing_data1.map((item, index) => (checkSlot(item)) ? 
                       (<li key={index}>
                         <NormalTimePicker data={item} siteName={siteName} day={'Today'}/>
                       </li>) :
@@ -83,8 +85,7 @@ export default function PickTime(props) {
 
                 <ScrollableFeed>
                   <ul>
-                    {existing_data.map((item, index) => (checkSlot(item)) ?
-                      
+                    {existing_data2.map((item, index) => (checkSlot(item)) ?
                       (<li key={index}>
                         <NormalTimePicker data={item} siteName={siteName} day={'Tomorrow'} />
                       </li>) :
