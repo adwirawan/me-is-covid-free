@@ -14,7 +14,7 @@ export const TimeSlot = [
     startMinute: 15,
     endHour: 8,
     endMinute: 30,
-    slot:0
+    slot:5
   },
   {
     label: "08:30 - 08.45",
@@ -30,7 +30,7 @@ export const TimeSlot = [
     startMinute: 45,
     endHour: 9,
     endMinute: 0,
-    slot:0
+    slot:10
   },
 
   //9
