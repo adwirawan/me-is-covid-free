@@ -5,6 +5,7 @@ import TestBooking from './pages/TestBooking';
 import MapPage from './pages/MapPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BookingConfirmation from './pages/BookingConfirmation';
+import ReCheckBooking from './pages/ReCheckBooking';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path='/map'>
             <MapPage />
+          </Route>
+          <Route exact path='/booking/recheck'>
+            <ReCheckBooking />
           </Route>
         </Switch>
       </div>

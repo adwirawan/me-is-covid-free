@@ -14,9 +14,9 @@ class Navbar extends Component {
       <nav className="NavbarItems">
         
         <div className='title'>
-          <h1 className>
-            # Me Is Covid Free
-          </h1>
+          <h2>
+            #MeIsCovidFree
+          </h2>
         </div>
         
         <div className="menu-icon" onClick={this.handleClick}>

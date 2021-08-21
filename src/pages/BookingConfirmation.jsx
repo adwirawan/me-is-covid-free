@@ -5,6 +5,7 @@ import './BookingConfirmation.css'
 import community from '../assets/community.png'
 import asset_1 from '../assets/Asset_1.png';
 import asset_3 from '../assets/Asset_3.png';
+import {Link} from 'react-router-dom';
 
 export default function BookingConfirmation() {
   return (
@@ -31,7 +32,6 @@ export default function BookingConfirmation() {
               <h2>
                 Booking Confirmed
               </h2>
-              {' '}
             </Grid>
             <Grid item>
               <img src={tick} className='tick'/>
@@ -49,12 +49,22 @@ export default function BookingConfirmation() {
           <br/>
           <p>"here you are contributing to a better community"</p>
         </Grid>
-
-        <Grid item>
-          <img src={community} className='photo' />
-        </Grid>
-
       </Grid>
+
+      <div>
+      <img 
+        src={community}
+        width="40%" 
+      />
+      </div>
+
+      <div>
+      <Link to='/'>
+        <button className='btn-choose-1'>
+          <h2 className='btn-text'>BACK TO HOME</h2>
+        </button>
+      </Link>
+      </div>
 
     </div>
   )
