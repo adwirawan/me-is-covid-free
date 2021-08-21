@@ -1,14 +1,29 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import emailjs from "emailjs-com"
+import { Grid,TextField,IconButton } from '@material-ui/core'
+import SendIcon from '@material-ui/icons/Send'
 import calendar from '../assets/calendar.png'
 import './ReCheckBooking.css'
 import {Link} from 'react-router-dom';
 import bgRecheck from "../assets/bg-recheck.jpg"
 
 export default function ReCheckBooking() {
+  function sendEmail(e){
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_lr7lvnn', e.target, 'user_ikn7Qer3PrE2SitEeELAH')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    e.target.reset();
+  }
+
   return (
     <div className="main-recheck">
       <img src={bgRecheck} id="bg"/>
+
       <div className="recheck-content">
       <Grid
         container
@@ -39,6 +54,14 @@ export default function ReCheckBooking() {
               <img src={calendar} className='photo'/>
             </Grid>
             <Grid item>
+              <form onSubmit={sendEmail} noValidate autoComplete="off">
+                <TextField id='standard-basic' label='Your Name' name='name' size='small'/>
+                <br />
+                <TextField id='standard-basic' label='Your Email' name='email' size='small'/>
+                <IconButton type='submit' aria-label="delete" color="primary">
+                  <SendIcon />
+                </IconButton>
+              </form>
               <Link to='/booking/confirmation'>
                 <button className='btn-choose-1'>
                   <h2 className='btn-text'>CONFIRM</h2>

@@ -83,7 +83,7 @@ function MapPage(){
           zoom={ZOOM_LEVEL}
           >
             <TileLayer
-            url="https://api.maptiler.com/maps/pastel/256/{z}/{x}/{y}.png?key=CYPQnnmtAP32iCzx9DVq"
+            url="https://api.maptiler.com/maps/voyager/256/{z}/{x}/{y}.png?key=CYPQnnmtAP32iCzx9DVq"
             attribution="https://api.maptiler.com/maps/pastel/256/{z}/{x}/{y}.png?key=CYPQnnmtAP32iCzx9DVq"
             />
             {sites.map(site => (
