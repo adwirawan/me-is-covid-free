@@ -82,6 +82,9 @@ export default function ReCheckBooking(props) {
                     <li><TextField id='standard-basic' label='Email' name='email' size='small'/></li>
                     <li><TextField id='standard-basic' label='Phone Number' name='phone' size='small'/></li>
                     <input hidden name="siteName" value={siteName} />
+                    <input hidden name="date" value={checkDate()} />
+                    <input hidden name="day" value={day} />
+                    <input hidden name="time" value={time} />
                   </ul>
                 </div>
                 <button type='submit' className='btn-choose-1'>
