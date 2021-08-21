@@ -70,7 +70,7 @@ export default function HospitalAvailability() {
         <h3 className='hospitalAvailableTime'>
           {timeRange.value.start} - {timeRange.value.end}
         </h3>
-        
+
       </div>
 
       <br/>
@@ -78,7 +78,7 @@ export default function HospitalAvailability() {
       <TimeGrid startTime={timeRange.value.start} endTime={timeRange.value.end} quota={quota} />
 
       <Link to='/hospital/login'>
-        <button type='submit' className='btn-hospital-save' onClick={showAllert()}>
+        <button type='submit' className='btn-hospital-save'>
           <h6 className='btn-hospital-save-text'>SAVE</h6>
         </button>
       </Link>

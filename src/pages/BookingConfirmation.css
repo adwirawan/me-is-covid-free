@@ -38,3 +38,12 @@ div {
   margin-right: 20px;
   cursor: pointer;
 }
+
+.confirm-text {
+  font-family: 'Poppins';
+  font-size: 15px;
+}
+
+.confirm-title {
+  padding-top: 50px;
+}
