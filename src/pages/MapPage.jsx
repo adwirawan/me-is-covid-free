@@ -1,19 +1,37 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps';
 import {Link} from 'react-router-dom';
 import './MapPage.css';
 import Button from "@material-ui/core/Button";
 import markerIconPng from "../assets/location.png";
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Circle, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import {Icon} from "leaflet";
 
+const defaultCenter = [-37.83,144.946457]
+var defaultZoom = 8
+
+function LocationMarker() {
+
+  const [position, setPosition] = useState(null)
+  const map = useMapEvents({
+    click() {
+      map.locate()
+    },
+    locationfound(e) {
+      setPosition(e.latlng)
+      map.flyTo(e.latlng, 13)
+    },
+  })
+
+  return position === null ? null : (
+    <Circle center={position} radius ={2000}>
+    </Circle>
+  )
+}
 
 function MapPage(){
-  const [center, setCenter] = useState({lat:-37.83,lng:144.946457});
-  const ZOOM_LEVEL = 12;
-
   const sites = [
     {
       name: "Alfred Health - The Alfred Hospital",
@@ -79,13 +97,14 @@ function MapPage(){
         <h2>React Open Street Maps</h2>
         <div>
           <MapContainer
-          center={center}
-          zoom={ZOOM_LEVEL}
+          center={defaultCenter}
+          zoom={defaultZoom}
           >
             <TileLayer
             url="https://api.maptiler.com/maps/voyager/256/{z}/{x}/{y}.png?key=CYPQnnmtAP32iCzx9DVq"
             attribution="https://api.maptiler.com/maps/pastel/256/{z}/{x}/{y}.png?key=CYPQnnmtAP32iCzx9DVq"
             />
+            <LocationMarker />
             {sites.map(site => (
               <Marker position={site.position} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 25]})}>
                 <Popup>
@@ -97,6 +116,7 @@ function MapPage(){
                 </Popup>
               </Marker>
             ))}
+
           </MapContainer>
         </div>
       </div>
