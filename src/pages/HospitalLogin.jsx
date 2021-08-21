@@ -30,7 +30,7 @@ export default function HospitalLogin() {
 
           <TextField
             id="outlined-username"
-            label="Username"
+            label="Testing Centre Name"
             value={Username}
             onChange={handleUsernameChange}
             variant="outlined"
