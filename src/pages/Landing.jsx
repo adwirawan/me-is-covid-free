@@ -4,13 +4,16 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import doctorPic1 from "../assets/lifesavers.png";
 import doctorPic2 from "../assets/plant.png";
 import {Link} from 'react-router-dom';
+import Navbar from '../components/Navbar/Navbar';
 
 export default function Landing() {
   return (
     <div className="main">
-      <div className="container">
+      {/* <div className="container">
         <h1 className='title'># Me Is Covid Free</h1>
-      </div>
+      </div> */}
+
+      <Navbar />
 
       <img src={doctorPic1} className='img-1'/>
       <img src={doctorPic2} className='img-2'/>

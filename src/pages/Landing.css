@@ -4,22 +4,6 @@
   padding: 0;
 }
 
-.title {
-  font-family: 'Poppins';
-  font-size: 65px;
-  color: #184163;
-  padding-top: 20px;
-  padding-left: 50px;
-  opacity: 0.65;
-}
-
-.container {
-  background-image: url("../assets/bg-top.png");
-  text-align: left;
-  background-repeat: no-repeat;
-  height: 150px;
-}
-
 .img-1 {
   position: absolute;
   top: 280px;
