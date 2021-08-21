@@ -19,9 +19,7 @@ function App() {
           <Route exact path="/login">
             <UserLogin />
           </Route>
-          <Route exact path='/availability'>
-            <HospitalAvailability />
-          </Route>
+
           <Route exact path='/map'>
             <MapPage />
           </Route>
