@@ -1,4 +1,18 @@
 .about {
   margin: auto;
   vertical-align: middle;
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+  padding: 40px;
+  color: #184163;
+}
+
+.teamName {
+  font-family: 'Poppins';
+  font-size: 50px;
+  color: #236da9;
+  left: 0;
+  opacity: 0.65;
+  letter-spacing: 5;
+  font-style: oblique;
 }
