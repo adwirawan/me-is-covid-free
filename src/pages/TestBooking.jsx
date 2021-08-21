@@ -1,6 +1,6 @@
 import React from 'react';
 import './TestBooking.css';
-import desk from "../assets/desk.png";
+import desk from "../assets/desk-1.png";
 import gradient from "../assets/bg-top.png";
 import { Link } from 'react-router-dom';
 
