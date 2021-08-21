@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: 'Poppins';
+  font-size: 65px;
+  color: #184163;
+  padding-top: 20px;
+  padding-left: 50px;
+  opacity: 0.65;
+}
+
+.container {
+  background-image: url("../assets/bg-top.png");
+  text-align: left;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+
+.img-1 {
+  position: absolute;
+  top: 280px;
+  left: 100px;
+  height: 250px;
+}
+
+.img-2 {
+  position: absolute;
+  top: 350px;
+  right: 100px;
+  height: 350px;
+}
+
+.buttons {
+  margin-top: 200px;
+}
+
+.btn-choose-1{
+  border: 3px solid #236DA9;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  width: 280px;
+  height: auto;
+  color: #FF7D7D;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn-choose-2{
+  border: 3px solid #85D5CD;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  width: 280px;
+  height: auto;
+  color: #FF7D7D;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn-text {
+  font-family: 'Poppins';
+  text-decoration: none;
+  font-size: 30px;
+  padding: 20px;
+  color: #184163;
+}
+
+a:visited, a:hover, a:active, a:link {
+  text-decoration: none!important;
+}

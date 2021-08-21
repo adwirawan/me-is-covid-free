@@ -1,0 +1,56 @@
+.title-booking {
+  font-family: 'Poppins';
+  font-size: 45px;
+  color: #184163;
+  padding-top: 100px;
+  font-style: oblique;
+}
+
+.booking-text {
+  margin-top: 20px;
+}
+
+p {
+  font-family: 'Poppins';
+}
+
+.btn-booking{
+  border: 3px solid #236DA9;
+  background-color: #FFFFFF;
+  border-radius: 45px;
+  width: 250px;
+  height: 80px;
+  color: #236DA9;
+  text-decoration: none;
+  margin-top: 200px;
+  margin-left: 700px;
+}
+
+.small {
+  font-size: 25px;
+  font-family: 'Poppins';
+  color: #184163;
+}
+
+.img-3 {
+  position: absolute;
+  top: 350px;
+  left: 70px;
+  height: 300px;
+}
+
+.gradient-1 {
+  transform: rotate(250deg);
+  position: absolute;
+  top: -500px;
+  left: -600px;
+  height: 200px;
+}
+
+.gradient-2 {
+  transform: rotate(320deg);
+  position: absolute;
+  top: -300px;
+  left: 700px;
+  height: 200px;
+}

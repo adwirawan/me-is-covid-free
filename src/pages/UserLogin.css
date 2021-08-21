@@ -1,0 +1,9 @@
+.login-box {
+  border-radius: 25px;
+  border: 2px solid #A777DD;
+  padding: 20px;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  margin: 100px auto;
+}

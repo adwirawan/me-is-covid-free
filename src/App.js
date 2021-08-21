@@ -1,22 +1,26 @@
 import './App.css';
-import { Switch, Route, BrowserRouter } from "react-router-dom";
-import HospitalAvailability from './pages/HospitalAvailability';
-import BookingConfirmation from './pages/BookingConfirmation';
-import Navbar from './components/Navbar/Navbar';
+import UserLogin from './pages/UserLogin';
+import Landing from './pages/Landing';
+import TestBooking from './pages/TestBooking';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-
-      <Navbar />
-
-      {/* <BrowserRouter>
+    <Router>
+      <div className="App">
         <Switch>
-          <Route exact path="/" component={ BookingConfirmation } />
-          <Route path="/hospital/availability" component={ HospitalAvailability } />
+          <Route exact path="/">
+            <Landing />
+          </Route>
+          <Route exact path="/booking">
+            <TestBooking />
+          </Route>
+          <Route exact path="/login">
+            <UserLogin />
+          </Route>
         </Switch>
-      </BrowserRouter> */}
-    </div>
+      </div>
+    </Router>
   );
 }
 
