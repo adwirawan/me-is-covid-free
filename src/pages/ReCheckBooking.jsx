@@ -7,10 +7,12 @@ import './ReCheckBooking.css'
 import {Link, useParams} from 'react-router-dom';
 import bgRecheck from "../assets/bg-recheck.jpg"
 
-export default function ReCheckBooking() {
+export default function ReCheckBooking(props) {
   const { time } = useParams();
 
   const { siteName } = useParams();
+
+  const { day } = useParams();
 
   function sendEmail(e){
     e.preventDefault();
@@ -44,7 +46,7 @@ export default function ReCheckBooking() {
         <Grid item className='message'>
           <p>You are allocated to</p>
           <p>Place: {siteName} </p>
-          <p>Time: {time} </p>
+          <p>Time: {day} {time} </p>
         </Grid>
 
         <Grid item>
@@ -66,7 +68,7 @@ export default function ReCheckBooking() {
                   <SendIcon />
                 </IconButton>
               </form>
-              <Link to={`/booking/${siteName}/${time}/confirmation`}>
+              <Link to={`/booking/${siteName}/${day}/${time}/confirmation`}>
                 <button className='btn-choose-1'>
                   <h2 className='btn-text'>CONFIRM</h2>
                 </button>

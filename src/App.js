@@ -27,10 +27,10 @@ function App() {
           <Route exact path="/login">
             <UserLogin />
           </Route>
-          <Route exact path='/booking/:siteName/:time/recheck'>
+          <Route exact path='/booking/:siteName/:day/:time/recheck'>
             <ReCheckBooking />
           </Route>
-          <Route exact path="/booking/:siteName/:time/confirmation">
+          <Route exact path="/booking/:siteName/:day/:time/confirmation">
             <BookingConfirmation />
           </Route>
           <Route exact path='/booking/map'>

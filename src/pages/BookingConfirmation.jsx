@@ -11,6 +11,8 @@ export default function BookingConfirmation() {
 
   const { siteName } = useParams();
 
+  const { day } = useParams();
+
   return (
     <div>
 
@@ -47,7 +49,7 @@ export default function BookingConfirmation() {
 
         <Grid item xs={6} className='message'>
           <p>Congratulations! Your booking is confirmed</p>
-          <p>You are booked to {time} time slot at {siteName}</p>
+          <p>You are booked to {day.toUpperCase()} {time} time slot at {siteName}</p>
           <p>Please arrive 5 minutes before your booked session</p>
           <p>You should received your booking confirmation through email soon</p>
           <br/>

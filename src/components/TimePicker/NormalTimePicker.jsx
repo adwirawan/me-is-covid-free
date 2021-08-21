@@ -9,7 +9,7 @@ export default function NormalTimePicker(props) {
   
   return (
     <div>
-      <Link to={`/booking/${siteName}/${item.label}/recheck`}>
+      <Link to={`/booking/${siteName}/${props.day}/${item.label}/recheck`}>
         <Button 
           variant="outlined" 
           size="large" 

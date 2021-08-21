@@ -68,7 +68,7 @@ export default function PickTime(props) {
                   <ul>
                     {existing_data.map((item, index) => (checkSlot(item)) ? 
                       (<li key={index}>
-                        <NormalTimePicker data={item} siteName={siteName} />
+                        <NormalTimePicker data={item} siteName={siteName} day={'Today'}/>
                       </li>) :
                       (<li key={index}>
                         <DisabledTimePicker data={item} />
@@ -86,7 +86,7 @@ export default function PickTime(props) {
                     {existing_data.map((item, index) => (checkSlot(item)) ?
                       
                       (<li key={index}>
-                        <NormalTimePicker data={item} />
+                        <NormalTimePicker data={item} siteName={siteName} day={'Tomorrow'} />
                       </li>) :
                       (<li key={index}>
                         <DisabledTimePicker data={item} />
