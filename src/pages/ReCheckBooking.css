@@ -14,17 +14,9 @@
   font-family: 'Poppins';
 }
 
-.tick {
-  height: 50px;
-  width: 62px;
-}
-
 .photo {
-  text-align: center;
-}
-
-div {
-  text-align: center;
+  height: 150px;
+  width: 150px;
 }
 
 .btn-choose-1{

@@ -2,6 +2,7 @@ import React from 'react';
 import './TestBooking.css';
 import desk from "../assets/desk.png";
 import gradient from "../assets/bg-top.png";
+import { Link } from 'react-router-dom';
 
 export default function TestBooking() {
   return (
@@ -21,9 +22,11 @@ export default function TestBooking() {
       <img src={desk} className="img-3" />
 
       <div>
-        <button className="btn-booking">
-          <p className="small">Book Here</p>
-        </button>
+        <Link to='/booking/recheck'>
+          <button className="btn-booking">
+            <p className="small">Book Here</p>
+          </button>
+        </Link>
       </div>
     </div>
   )
