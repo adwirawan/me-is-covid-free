@@ -18,6 +18,7 @@ export default function ReCheckBooking() {
         console.log(error.text);
     });
     e.target.reset();
+    window.location.href = "./confirmation"
   }
 
   return (
@@ -37,8 +38,10 @@ export default function ReCheckBooking() {
           </h2>
         </Grid>
 
-        <Grid item className='message'>
+        <Grid item className='message-small'>
           <p>You are allocated to</p>
+        </Grid>
+        <Grid item className='message'>
           <p>Place: RMH Testing Site</p>
           <p>Time: 9:00 am</p>
         </Grid>
@@ -50,23 +53,26 @@ export default function ReCheckBooking() {
             justifyContent="center"
             alignItems="flex-end"
           >
+
             <Grid item>
-              <img src={calendar} className='photo'/>
-            </Grid>
-            <Grid item>
-              <form onSubmit={sendEmail} noValidate autoComplete="off">
-                <TextField id='standard-basic' label='Your Name' name='name' size='small'/>
-                <br />
-                <TextField id='standard-basic' label='Your Email' name='email' size='small'/>
-                <IconButton type='submit' aria-label="delete" color="primary">
-                  <SendIcon />
-                </IconButton>
-              </form>
-              <Link to='/booking/confirmation'>
-                <button className='btn-choose-1'>
+              <form autoComplete="off" onSubmit={sendEmail} >
+                <div className='inputs'>
+                  <Grid item className='message-small'>
+                    <p>Please check that you have the </p>
+                    <p>correct booking and fill out your details</p>
+                    <p>as follows to get a reminder email</p>
+                  </Grid>
+                  <ul>
+                    <li><TextField id='standard-basic' label='Name' name='name' size='small'/></li>
+                    <li><TextField id='standard-basic' label='Email' name='email' size='small'/></li>
+                    <li><TextField id='standard-basic' label='Phone Number' name='email' size='small'/></li>
+                  </ul>
+                </div>
+                <button type='submit' className='btn-choose-1'>
                   <h2 className='btn-text'>CONFIRM</h2>
                 </button>
-              </Link>
+              </form>
+
             </Grid>
           </Grid>
         </Grid>
