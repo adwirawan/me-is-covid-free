@@ -9,6 +9,8 @@ import {Link, useParams} from 'react-router-dom';
 export default function BookingConfirmation() {
   const { time } = useParams();
 
+  const { siteName } = useParams();
+
   return (
     <div>
 
@@ -45,7 +47,7 @@ export default function BookingConfirmation() {
 
         <Grid item xs={6} className='message'>
           <p>Congratulations! Your booking is confirmed</p>
-          <p>You are booked to {time} time slot at the Royal Melbourne Hospital</p>
+          <p>You are booked to {time} time slot at {siteName}</p>
           <p>Please arrive 5 minutes before your booked session</p>
           <p>You should received your booking confirmation through email soon</p>
           <br/>

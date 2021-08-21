@@ -27,16 +27,16 @@ function App() {
           <Route exact path="/login">
             <UserLogin />
           </Route>
-          <Route exact path='/booking/:time/recheck'>
+          <Route exact path='/booking/:siteName/:time/recheck'>
             <ReCheckBooking />
           </Route>
-          <Route exact path="/booking/:time/confirmation">
+          <Route exact path="/booking/:siteName/:time/confirmation">
             <BookingConfirmation />
           </Route>
-          <Route exact path='/map'>
+          <Route exact path='/booking/map'>
             <MapPage />
           </Route>
-          <Route exact path='/booking/selectTime'>
+          <Route exact path='/booking/:siteName/selectTime'>
             <PickTime data={AvailableTimeSlot} />
           </Route>
           

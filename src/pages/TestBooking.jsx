@@ -22,7 +22,7 @@ export default function TestBooking() {
       <img src={desk} className="img-3" />
 
       <div>
-        <Link to='/booking/selectTime'>
+        <Link to='/booking/map'>
           <button className="btn-booking">
             <p className="small">Book Here</p>
           </button>

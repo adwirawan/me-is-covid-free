@@ -10,6 +10,8 @@ import bgRecheck from "../assets/bg-recheck.jpg"
 export default function ReCheckBooking() {
   const { time } = useParams();
 
+  const { siteName } = useParams();
+
   function sendEmail(e){
     e.preventDefault();
 
@@ -41,7 +43,7 @@ export default function ReCheckBooking() {
 
         <Grid item className='message'>
           <p>You are allocated to</p>
-          <p>Place: RMH Testing Site</p>
+          <p>Place: {siteName} </p>
           <p>Time: {time} </p>
         </Grid>
 
@@ -64,7 +66,7 @@ export default function ReCheckBooking() {
                   <SendIcon />
                 </IconButton>
               </form>
-              <Link to={`/booking/${time}/confirmation`}>
+              <Link to={`/booking/${siteName}/${time}/confirmation`}>
                 <button className='btn-choose-1'>
                   <h2 className='btn-text'>CONFIRM</h2>
                 </button>

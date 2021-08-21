@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 
 export default function NormalTimePicker(props) {
   const item = props.data;
+
+  const siteName = props.siteName;
   
   return (
     <div>
-      <Link to={`/booking/${item.label}/recheck`}>
+      <Link to={`/booking/${siteName}/${item.label}/recheck`}>
         <Button 
           variant="outlined" 
           size="large" 

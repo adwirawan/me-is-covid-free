@@ -8,6 +8,7 @@ import DisabledTimePicker from '../components/TimePicker/DisabledTimePicker';
 import ScrollableFeed from 'react-scrollable-feed';
 import './PickTime.css';
 import bgPickTime from '../assets/bg-pickTime.jpeg';
+import {Link, useParams} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PickTime(props) {
+
+  const { siteName } = useParams();
+
   const classes = useStyles();
 
   const existing_data = props.data;
@@ -45,7 +49,7 @@ export default function PickTime(props) {
         </Grid>
 
         <Grid item xs={6} className='sub-title'>
-          <h3>Testing centre: Royal Melbourne Hospital</h3>
+          <h3>Testing centre: {siteName}</h3>
         </Grid>
 
         <Grid item xs={12}>
@@ -64,7 +68,7 @@ export default function PickTime(props) {
                   <ul>
                     {existing_data.map((item, index) => (checkSlot(item)) ? 
                       (<li key={index}>
-                        <NormalTimePicker data={item} />
+                        <NormalTimePicker data={item} siteName={siteName} />
                       </li>) :
                       (<li key={index}>
                         <DisabledTimePicker data={item} />
