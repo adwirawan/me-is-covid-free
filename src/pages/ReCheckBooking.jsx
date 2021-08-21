@@ -3,10 +3,13 @@ import { Grid } from '@material-ui/core'
 import calendar from '../assets/calendar.png'
 import './ReCheckBooking.css'
 import {Link} from 'react-router-dom';
+import bgRecheck from "../assets/bg-recheck.jpg"
 
 export default function ReCheckBooking() {
   return (
-    <div>
+    <div className="main-recheck">
+      <img src={bgRecheck} id="bg"/>
+      <div className="recheck-content">
       <Grid
         container
         direction="column"
@@ -18,7 +21,7 @@ export default function ReCheckBooking() {
             Re-check Your Booking
           </h2>
         </Grid>
-      
+
         <Grid item className='message'>
           <p>You are allocated to</p>
           <p>Place: RMH Testing Site</p>
@@ -47,6 +50,7 @@ export default function ReCheckBooking() {
 
 
       </Grid>
+      </div>
 
     </div>
   )
