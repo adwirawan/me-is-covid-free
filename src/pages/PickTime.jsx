@@ -56,10 +56,10 @@ export default function PickTime(props) {
           <Grid container spacing={1} justifyContent="center" alignItems="center">
             <Grid item xs={3}></Grid>
             <Grid item xs={3}>
-              <h3>TODAY</h3>
+              <h3 className='day'>TODAY, 22 August 2021</h3>
             </Grid>
             <Grid item xs={3}>
-              <h3>TOMORROW</h3>
+              <h3 className='day'>TOMORROW, 23 August 2021</h3>
             </Grid>
             <Grid item xs={3}></Grid>
             <Grid item xs={3}>

@@ -13,3 +13,8 @@
   color: #184163;
   width: fit-content;
 }
+
+.day {
+  font-family: 'Poppins', sans-serif;
+  font-style: oblique;
+}

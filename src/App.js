@@ -9,6 +9,7 @@ import ReCheckBooking from './pages/ReCheckBooking';
 import { TimeSlot } from './components/HospitalAvailability/TimeSlot.js';
 import PickTime from './pages/PickTime';
 import { useState } from 'react';
+import HospitalAvailability from './pages/HospitalAvailability'
 
 function App() {
 
@@ -38,6 +39,11 @@ function App() {
           </Route>
           <Route exact path='/booking/:siteName/selectTime'>
             <PickTime data={AvailableTimeSlot} />
+          </Route>
+
+
+          <Route exact path='/hospital/availability'>
+            <HospitalAvailability />
           </Route>
           
         </Switch>

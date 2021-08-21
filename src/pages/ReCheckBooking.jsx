@@ -26,6 +26,14 @@ export default function ReCheckBooking(props) {
     e.target.reset();
   }
 
+  function checkDate() {
+    if(day === 'Today') {
+      return '22 August 2021'
+    } else {
+      return '23 August 2021'
+    }
+  }
+
   return (
     <div className="main-recheck">
       <img src={bgRecheck} id="bg"/>
@@ -46,7 +54,8 @@ export default function ReCheckBooking(props) {
         <Grid item className='message'>
           <p>You are allocated to</p>
           <p>Place: {siteName} </p>
-          <p>Time: {day} {time} </p>
+          <p>Date: {checkDate()} ({day})</p>
+          <p>Time: {time} </p>
         </Grid>
 
         <Grid item>

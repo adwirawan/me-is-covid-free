@@ -13,6 +13,14 @@ export default function BookingConfirmation() {
 
   const { day } = useParams();
 
+  function checkDate() {
+    if(day === 'Today') {
+      return '22 August 2021'
+    } else {
+      return '23 August 2021'
+    }
+  }
+
   return (
     <div>
 
@@ -49,7 +57,7 @@ export default function BookingConfirmation() {
 
         <Grid item xs={6} className='message'>
           <p>Congratulations! Your booking is confirmed</p>
-          <p>You are booked to {day.toUpperCase()} {time} time slot at {siteName}</p>
+          <p>You are booked to {checkDate()} ({day.toUpperCase()}) {time} time slot at {siteName}</p>
           <p>Please arrive 5 minutes before your booked session</p>
           <p>You should received your booking confirmation through email soon</p>
           <br/>
