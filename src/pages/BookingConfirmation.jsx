@@ -5,6 +5,7 @@ import './BookingConfirmation.css'
 import community from '../assets/community.png'
 import asset_1 from '../assets/Asset_1.png';
 import asset_3 from '../assets/Asset_3.png';
+import bgConfirm from "../assets/bg-confirm.jpg"
 import {Link} from 'react-router-dom';
 
 export default function BookingConfirmation() {
@@ -13,6 +14,7 @@ export default function BookingConfirmation() {
 
       {/* <img src={asset_1} />
       <img src={asset_3} /> */}
+      <img src={bgConfirm} id="bg"/>
 
       <Grid
         container
@@ -52,9 +54,9 @@ export default function BookingConfirmation() {
       </Grid>
 
       <div>
-      <img 
+      <img
         src={community}
-        width="40%" 
+        width="30%"
       />
       </div>
 
