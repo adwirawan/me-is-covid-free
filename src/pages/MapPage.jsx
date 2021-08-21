@@ -4,13 +4,14 @@ import {Link} from 'react-router-dom';
 import './MapPage.css';
 import Button from "@material-ui/core/Button";
 import markerIconPng from "../assets/location.png";
+import bgMap from "../assets/bg-map.jpg"
 
 import { MapContainer, TileLayer, Marker, Popup, Circle, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import {Icon} from "leaflet";
 
 const defaultCenter = [-36.9848, 143.3906]
-var defaultZoom = 8
+var defaultZoom = 6
 
 function LocationMarker() {
 
@@ -126,10 +127,12 @@ function MapPage(){
   ]
 
   return (
-    <div>
-      <h1>React Leaflet Map</h1>
+    <div className="mapPage-container">
+      <img src={bgMap} id="bg"/>
+      <h1 className="mapPage-title">Choose Your Testing Site</h1>
       <div>
-        <h2>React Open Street Maps</h2>
+        <p>Click on a testing site that is the most convenient location for you</p>
+        <p>to check out their available timeslots</p>
         <div>
           <MapContainer
           center={defaultCenter}
@@ -137,7 +140,7 @@ function MapPage(){
           >
             <TileLayer
             url="https://api.maptiler.com/maps/voyager/256/{z}/{x}/{y}.png?key=CYPQnnmtAP32iCzx9DVq"
-            attribution="https://api.maptiler.com/maps/pastel/256/{z}/{x}/{y}.png?key=CYPQnnmtAP32iCzx9DVq"
+            attribution='&copy; <a href="https://www.maptiler.com/">MapTiler</a> &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
             <LocationMarker />
             {sites.map(site => (

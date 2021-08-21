@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .leaflet-container {
-  height: 800px;
-  width: 100%;
+  height: 450px;
+  width: 650px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 50px;
+  border-color: #184163;
+  border-width: 10px;
 }
 
 .popUp-big {
@@ -14,4 +22,13 @@
 }
 
 .btn-popUp {
+}
+
+.mapPage-title {
+  font-family: 'Poppins';
+  text-decoration: none;
+  font-size: 30px;
+  padding: 40px;
+  color: #236DA9;
+  font-style: oblique;
 }
