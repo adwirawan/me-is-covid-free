@@ -4,10 +4,16 @@ import { Grid,TextField,IconButton } from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send'
 import calendar from '../assets/calendar.png'
 import './ReCheckBooking.css'
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import bgRecheck from "../assets/bg-recheck.jpg"
 
-export default function ReCheckBooking() {
+export default function ReCheckBooking(props) {
+  const { time } = useParams();
+
+  const { siteName } = useParams();
+
+  const { day } = useParams();
+
   function sendEmail(e){
     e.preventDefault();
 
@@ -18,7 +24,15 @@ export default function ReCheckBooking() {
         console.log(error.text);
     });
     e.target.reset();
-    window.location.href = "./confirmation"
+    window.location.href = `/booking/${siteName}/${day}/${time}/confirmation`
+  }
+
+  function checkDate() {
+    if(day === 'Today') {
+      return '22 August 2021'
+    } else {
+      return '23 August 2021'
+    }
   }
 
   return (
@@ -42,8 +56,9 @@ export default function ReCheckBooking() {
           <p>You are allocated to</p>
         </Grid>
         <Grid item className='message'>
-          <p>Place: RMH Testing Site</p>
-          <p>Time: 9:00 am</p>
+          <p>Place: {siteName} </p>
+          <p>Date: {checkDate()} ({day})</p>
+          <p>Time: {time} </p>
         </Grid>
 
         <Grid item>
@@ -65,7 +80,8 @@ export default function ReCheckBooking() {
                   <ul>
                     <li><TextField id='standard-basic' label='Name' name='name' size='small'/></li>
                     <li><TextField id='standard-basic' label='Email' name='email' size='small'/></li>
-                    <li><TextField id='standard-basic' label='Phone Number' name='email' size='small'/></li>
+                    <li><TextField id='standard-basic' label='Phone Number' name='phone' size='small'/></li>
+                    <input hidden name="siteName" value={siteName} />
                   </ul>
                 </div>
                 <button type='submit' className='btn-choose-1'>

@@ -145,9 +145,11 @@ function MapPage(){
                 <Popup>
                   <p className="popUp-big">{site.name}</p>
                   <p className="popUp-small">{site.address}</p>
-                  <Button variant="contained" color="primary" size="small" className="btn-popUp">
-                  Book Here
-                  </Button>
+                  <Link to={`/booking/${site.name}/selectTime`}>
+                    <Button variant="contained" color="primary" size="small" className="btn-popUp">
+                      Book Here
+                    </Button>
+                  </Link>
                 </Popup>
               </Marker>
             ))}

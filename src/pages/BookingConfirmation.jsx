@@ -3,12 +3,24 @@ import Grid from '@material-ui/core/Grid';
 import tick from '../assets/tick.png';
 import './BookingConfirmation.css'
 import community from '../assets/community.png'
-import asset_1 from '../assets/Asset_1.png';
-import asset_3 from '../assets/Asset_3.png';
 import bgConfirm from "../assets/bg-confirm.jpg"
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
 export default function BookingConfirmation() {
+  const { time } = useParams();
+
+  const { siteName } = useParams();
+
+  const { day } = useParams();
+
+  function checkDate() {
+    if(day === 'Today') {
+      return '22 August 2021'
+    } else {
+      return '23 August 2021'
+    }
+  }
+
   return (
     <div>
 
@@ -45,7 +57,7 @@ export default function BookingConfirmation() {
 
         <Grid item xs={6} className='message'>
           <p>Congratulations! Your booking is confirmed</p>
-          <p>You are booked to 9.00 AM time slot at the Royal Melbourne Hospital</p>
+          <p>You are booked to {checkDate()} ({day.toUpperCase()}) {time} time slot at {siteName}</p>
           <p>Please arrive 5 minutes before your booked session</p>
           <p>You should received your booking confirmation through email soon</p>
           <br/>
