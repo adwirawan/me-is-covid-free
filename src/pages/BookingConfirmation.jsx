@@ -42,7 +42,7 @@ export default function BookingConfirmation() {
             justifyContent="center"
             alignItems="flex-end"
           >
-            <Grid item>
+            <Grid item className="confirm-title">
               <h2>
                 Booking Confirmed
               </h2>
@@ -56,12 +56,12 @@ export default function BookingConfirmation() {
         <br/><br/>
 
         <Grid item xs={6} className='message'>
-          <p>Congratulations! Your booking is confirmed</p>
-          <p>You are booked to {checkDate()} ({day.toUpperCase()}) {time} time slot at {siteName}</p>
-          <p>Please arrive 5 minutes before your booked session</p>
-          <p>You should received your booking confirmation through email soon</p>
+          <p className="confirm-text">Congratulations! Your booking is confirmed</p>
+          <p className="confirm-text">You are booked to {checkDate()} ({day.toUpperCase()}) {time} time slot at {siteName}</p>
+          <p className="confirm-text">Please arrive 5 minutes before your booked session</p>
+          <p className="confirm-text">You should received your booking confirmation through email soon</p>
           <br/>
-          <p>"here you are contributing to a better community"</p>
+          <p className="confirm-text">"here you are contributing to a better community"</p>
         </Grid>
       </Grid>
 

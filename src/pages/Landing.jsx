@@ -3,20 +3,22 @@ import './Landing.css';
 import {Link} from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 import Grid from '@material-ui/core/Grid';
+import bgLanding from "../assets/bg-landing.jpg"
 
 export default function Landing() {
   return (
     <div className="main">
 
       <Navbar />
+      <img src={bgLanding} id="bg"/>
 
-      <Grid 
+      <Grid
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
       >
-        
+
         <Grid item xs={6} sm={3}>
           <Link to='/booking'>
             <button className='btn-choose-1-landing'>
@@ -31,7 +33,7 @@ export default function Landing() {
             </a>
           </button>
         </Grid>
-        
+
       </Grid>
     </div>
   )

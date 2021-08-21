@@ -74,7 +74,7 @@ export default function HospitalAvailability() {
         <h3 className='hospitalAvailableTime'>
           {timeRange.value.start} - {timeRange.value.end}
         </h3>
-        
+
       </div>
 
       <br/>
