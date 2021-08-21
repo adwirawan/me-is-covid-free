@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import TestBooking from './pages/TestBooking';
 import MapPage from './pages/MapPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BookingConfirmation from './pages/BookingConfirmation';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
           <Route exact path="/login">
             <UserLogin />
           </Route>
-
+          <Route exact path="/booking/confirmation">
+            <BookingConfirmation />
+          </Route>
           <Route exact path='/map'>
             <MapPage />
           </Route>

@@ -6,9 +6,8 @@
 
 .img-1 {
   position: absolute;
-  top: 280px;
-  left: 100px;
-  height: 250px;
+  height: 400px;
+  left: 0;
 }
 
 .img-2 {
@@ -32,6 +31,7 @@
   text-decoration: none;
   margin-left: 20px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .btn-choose-2{
