@@ -4,11 +4,12 @@
   padding: 0;
 }
 
-.title {
+.me-is-covid-free {
   font-family: 'Poppins';
-  font-size: 30px;
+  font-size: 50px;
   color: #184163;
-  padding-left: 50px;
+  left: 0;
+  margin: 30px;
   opacity: 0.65;
   width: 100%;
   letter-spacing: 5;

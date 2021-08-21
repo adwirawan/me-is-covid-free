@@ -11,6 +11,7 @@ import { TimeSlot2 } from './components/HospitalAvailability/TimeSlot2.js';
 import PickTime from './pages/PickTime';
 import HospitalAvailability from './pages/HospitalAvailability';
 import HospitalLogin from './pages/HospitalLogin';
+import About from './pages/About';
 
 function App() {
 
@@ -49,6 +50,10 @@ function App() {
           </Route>
           <Route exact path='/hospital/availability'>
             <HospitalAvailability />
+          </Route>
+
+          <Route exact path="/about">
+            <About />
           </Route>
           
         </Switch>

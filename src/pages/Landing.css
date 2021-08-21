@@ -21,29 +21,31 @@
   margin-top: 200px;
 }
 
-.btn-choose-1{
+.btn-choose-1-landing{
   border: 3px solid #236DA9;
   background-color: #FFFFFF;
   border-radius: 30px;
-  width: 280px;
+  width: 300px;
   height: auto;
   color: #FF7D7D;
   text-decoration: none;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 170px;
   cursor: pointer;
 }
 
-.btn-choose-2{
+.btn-choose-2-landing{
   border: 3px solid #85D5CD;
   background-color: #FFFFFF;
   border-radius: 30px;
-  width: 280px;
+  width: 300px;
   height: auto;
   color: #FF7D7D;
   text-decoration: none;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 170px;
 }
 
 .btn-text {

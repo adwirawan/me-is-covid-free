@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import "./HospitalAvailability.css";
 import bgHospital from '../assets/bg-pickTime.jpeg';
 import { Link } from "react-router-dom";
+import { Alert, AlertTitle } from '@material-ui/lab';
 
 export default function HospitalAvailability() {
   // Time Range
@@ -77,7 +78,7 @@ export default function HospitalAvailability() {
       <TimeGrid startTime={timeRange.value.start} endTime={timeRange.value.end} quota={quota} />
 
       <Link to='/hospital/login'>
-        <button type='submit' className='btn-hospital-save'>
+        <button type='submit' className='btn-hospital-save' onClick={showAllert()}>
           <h6 className='btn-hospital-save-text'>SAVE</h6>
         </button>
       </Link>
