@@ -2,3 +2,16 @@
   height: 800px;
   width: 100%;
 }
+
+.popUp-big {
+  font-size: 15px;
+  padding: 0px;
+}
+
+.popUp-small {
+  font-size: 11px;
+  padding: 0px;
+}
+
+.btn-popUp {
+}

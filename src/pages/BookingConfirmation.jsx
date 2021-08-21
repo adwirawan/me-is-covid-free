@@ -20,7 +20,7 @@ export default function BookingConfirmation() {
         alignItems="center"
       >
         <Grid item className='title'>
-          
+
           <Grid
             container
             direction="row"
@@ -42,7 +42,7 @@ export default function BookingConfirmation() {
         <br/><br/>
 
         <Grid item xs={6} className='message'>
-          <p>Congratulation! Your booking is confirmed</p>
+          <p>Congratulations! Your booking is confirmed</p>
           <p>You are booked to 9.00 AM time slot at the Royal Melbourne Hospital</p>
           <p>Please arrive 5 minutes before your booked session</p>
           <p>You should received your booking confirmation through email soon</p>

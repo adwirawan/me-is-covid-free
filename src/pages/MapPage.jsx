@@ -1,6 +1,8 @@
 import React, {useState, useRef} from 'react';
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps';
+import {Link} from 'react-router-dom';
 import './MapPage.css';
+import Button from "@material-ui/core/Button";
 import markerIconPng from "../assets/location.png";
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
@@ -89,6 +91,9 @@ function MapPage(){
                 <Popup>
                   <p className="popUp-big">{site.name}</p>
                   <p className="popUp-small">{site.address}</p>
+                  <Button variant="contained" color="primary" size="small" className="btn-popUp">
+                  Book Here
+                  </Button>
                 </Popup>
               </Marker>
             ))}
