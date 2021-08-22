@@ -12,6 +12,7 @@ import PickTime from './pages/PickTime';
 import HospitalAvailability from './pages/HospitalAvailability';
 import HospitalLogin from './pages/HospitalLogin';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
 
@@ -54,6 +55,9 @@ function App() {
 
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
           </Route>
           
         </Switch>

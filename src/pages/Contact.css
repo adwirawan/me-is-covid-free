@@ -1,0 +1,44 @@
+.contact {
+  width:600px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.contact-us {
+  margin: auto;
+  vertical-align: middle;
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+  padding: 40px;
+  color: #184163;
+}
+
+.inside-paper {
+  width: 540px;
+  margin: auto;
+}
+
+.text-field {
+  margin-bottom: 20px;
+}
+
+.btn-send-message{
+  border: 3px solid #236da9;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  width: 300px;
+  height: 50px;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.btn-send-message-text {
+  font-family: 'Poppins';
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px;
+  color: #184163;
+}
