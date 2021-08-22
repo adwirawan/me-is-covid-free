@@ -21,9 +21,8 @@ function LocationMarker() {
       map.locate()
     },
     locationfound(e) {
-      const latlng = [-37.8136,144.9631]
-      setPosition(latlng)
-      map.flyTo(latlng, 13)
+      setPosition(e.latlng)
+      map.flyTo(e.latlng, 13)
     },
   })
 
