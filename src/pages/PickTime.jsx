@@ -39,13 +39,13 @@ export default function PickTime(props) {
       return false;
     }
   }
-  
+
   return (
     <div>
 
       <img src={bgPickTime} id="bg"/>
 
-      <Grid container spacing={3} justifyContent="center" alignItems="center">
+      <Grid container spacing={3} justifyContent="center" alignItems="center" className="pickTime-container">
         <Grid item xs={12} className='title'>
           <h1>BOOK YOUR APPOINTMENT</h1>
         </Grid>
@@ -68,7 +68,7 @@ export default function PickTime(props) {
               <Paper className={classes.paper}>
                 <ScrollableFeed>
                   <ul>
-                    {existing_data1.map((item, index) => (checkSlot(item)) ? 
+                    {existing_data1.map((item, index) => (checkSlot(item)) ?
                       (<li key={index}>
                         <NormalTimePicker data={item} siteName={siteName} day={'Today'}/>
                       </li>) :
@@ -101,11 +101,11 @@ export default function PickTime(props) {
         </Grid>
 
       </Grid>
-      
-      
 
 
-      
+
+
+
     </div>
   )
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
 .title {
   font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   color: #184163;
   width: fit-content;
 }
@@ -9,7 +9,7 @@
 .message {
   text-align: center;
   align-content: center;
-  font-size: 15px;
+  font-size: 13px;
   color: #236DA9;
   font-family: 'Poppins';
 }
@@ -41,7 +41,7 @@ div {
 
 .confirm-text {
   font-family: 'Poppins';
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .confirm-title {
